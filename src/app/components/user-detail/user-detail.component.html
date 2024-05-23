@@ -1,0 +1,9 @@
+<div *ngIf="user" class="user-details">
+  <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <p>Email: {{ user.email }}</p>
+  <div class="button-container">
+    <button [routerLink]="['/update-user', user.id]" class="edit-button">Edit</button>
+    <button (click)="deleteUser()" class="delete-button">Delete</button>
+  </div>
+</div>
+<p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>

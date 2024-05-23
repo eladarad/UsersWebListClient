@@ -1,0 +1,12 @@
+.user-details {
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  .edit-button, .delete-button {
+    margin-right: 10px;
+  }
+  
