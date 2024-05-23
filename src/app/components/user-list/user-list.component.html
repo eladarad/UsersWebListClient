@@ -1,0 +1,12 @@
+<div class="user-list">
+  <ul>
+    <li *ngFor="let user of users">
+      <a [routerLink]="['/user-detail', user.id]">{{ user.first_name }} {{ user.last_name }}</a>
+    </li>
+  </ul>
+  <div class="button-container">
+    <button (click)="prevPage()" [disabled]="page <= 1" class="page-button">Previous</button>
+    <button (click)="nextPage()" class="page-button">Next</button>
+  </div>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+</div>
